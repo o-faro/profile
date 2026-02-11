@@ -10,7 +10,6 @@
 import { getHeroProjects } from "@/src/lib/content/filters";
 import { getAllProjects } from "@/src/lib/content/loader";
 import { ProjectWithContent } from "@/src/lib/content/types";
-import { Suspense } from "react";
 
 // TODO: Add homepage component here
 
@@ -30,7 +29,6 @@ export default async function Page({
   return (
     <div>
       HP Test {locale}
-      <Suspense></Suspense>
       <HeroList heroProjects={heroProjects} />
     </div>
   );
