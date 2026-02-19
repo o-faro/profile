@@ -1,0 +1,21 @@
+---
+alwaysApply: false
+---
+
+# Commit Message Format
+
+Generate commit messages following the Conventional Commits format.
+
+## Structure
+
+`<type>: <subject>`
+
+## Rules
+
+- Max 150 characters total (including type prefix)
+- Allowed types: `feat`, `fix`, `refactor`, `perf`, `test`, `chore`, `docs`, `build`, `ci`
+- Subject must not be empty
+- Subject must not start with a capital letter (no sentence-case, start-case, or pascal-case)
+- No period at the end
+- Use imperative mood (e.g. "add", "rename", "fix" — not "added", "renamed", "fixed")
+- Derive the type and subject from the staged diff

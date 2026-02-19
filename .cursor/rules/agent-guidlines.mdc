@@ -1,0 +1,58 @@
+---
+description: Core agent behavior - focused, conservative, explicit-only changes
+alwaysApply: true
+---
+
+# Agent Guidelines
+
+## Content Handling
+
+**NEVER** alter, rewrite, summarize, or improve the content
+
+**NEVER** invent missing information
+
+**The content is the source of truth**
+
+## Code Modification Scope
+
+**Modify only the minimal number of files** required to complete the task
+
+**DO NOT** improve or refactor unrelated code
+
+**DO NOT** expand scope beyond explicitly mentioned files without approval
+
+**If uncertain about scope**, ask before making changes
+
+## Architecture Discipline
+
+**Do not** introduce new architectural patterns
+
+**Do not** introduce new libraries or dependencies
+
+**Do not** create new abstractions unless explicitly requested
+
+**Do not** decide routing, i18n, or typing strategies without explicit instruction
+
+### If architectural change is required:
+
+1. Propose first
+2. Wait for confirmation
+3. Do not implement automatically
+
+## Assumption Policy
+
+**Do not** assume missing values
+
+**Do not** fill optional fields with defaults
+
+**Do not** infer intent
+
+**If information is ambiguous or incomplete**, ask before proceeding
+
+## Structure vs Content
+
+**Structural scaffolding** is allowed only when explicitly requested
+
+**Do not** generate UI, layout, styling, or rendering logic unless explicitly asked
+
+**Do not** transform domain models into presentation structures unless instructed

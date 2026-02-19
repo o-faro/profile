@@ -42,3 +42,7 @@ yarn-error.log*
 next-env.d.ts
 hero-prompt.txt
 .cursor/agents_backup
+plan-mode-prompt.txt
+.vscode/launch.json
+.vscode/settings.json
+public/_piny/piny.phone.js
