@@ -17,12 +17,12 @@ techStack: |-
 narratives:
   cv:
     - label: CV-Beschreibung
-      bodyText: |-
-        • Konzeption und Entwicklung eines internen Enterprise-Portals von Projektbeginn an mit Fokus auf ein desktopähnliches Nutzungserlebnis
-        • Umsetzung komplexer Drag-and-Drop-Interaktionen und animierter UI-Übergänge
-        • Entwicklung einer vollständig animierten Guided Tour mit GSAP inklusive automatischer Seitenwechsel
-        • Starker Fokus auf Usability, Performance und Skalierbarkeit im Konzernumfeld
-        • Enge Zusammenarbeit mit UX/UI-Designern, Backend-Entwicklung und Produktverantwortlichen
+      bodyText:
+        - "Konzeption und Entwicklung eines internen Enterprise-Portals von Projektbeginn an mit Fokus auf ein desktopähnliches Nutzungserlebnis"
+        - "Umsetzung komplexer Drag-and-Drop-Interaktionen und animierter UI-Übergänge"
+        - "Entwicklung einer vollständig animierten Guided Tour mit GSAP inklusive automatischer Seitenwechsel"
+        - "Starker Fokus auf Usability, Performance und Skalierbarkeit im Konzernumfeld"
+        - "Enge Zusammenarbeit mit UX/UI-Designern, Backend-Entwicklung und Produktverantwortlichen"
   portfolio:
     - label: Projektbeschreibung
       bodyText: |-

@@ -13,13 +13,13 @@ techStack: "React, Next.js, TypeScript, Vite, Zustand, REST APIs, Storybook, Jes
 narratives:
   cv:
     - label: "CV-Beschreibung"
-      bodyText: |-
-        • Greenfield-Entwicklung einer modernen Backoffice-Anwendung als Ablösung eines Angular-Legacy-Systems
-        • Konzeption und Umsetzung einer skalierbaren Frontend-Architektur mit klarer Komponenten-und State-Trennung
-        • Entwicklung wiederverwendbarer UI-Komponenten und interner Designsystem-Patterns
-        • Frontend-Integration von Authentifizierungs- und Autorisierungsmechanismen über Keycloak (OpenID Connect)
-        • Systematische Verbesserung von Testabdeckung, Performance und Frontend-Qualität
-        • Produktiver Einsatz moderner Entwickler-Tools inklusive KI-gestützter Workflows (Cursor IDE)
+      bodyText:
+        - "Greenfield-Entwicklung einer modernen Backoffice-Anwendung als Ablösung eines Angular-Legacy-Systems"
+        - "Konzeption und Umsetzung einer skalierbaren Frontend-Architektur mit klarer Komponenten-und State-Trennung"
+        - "Entwicklung wiederverwendbarer UI-Komponenten und interner Designsystem-Patterns"
+        - "Frontend-Integration von Authentifizierungs- und Autorisierungsmechanismen über Keycloak (OpenID Connect)"
+        - "Systematische Verbesserung von Testabdeckung, Performance und Frontend-Qualität"
+        - "Produktiver Einsatz moderner Entwickler-Tools inklusive KI-gestützter Workflows (Cursor IDE)"
 
 isHero: true
 showInCV: true

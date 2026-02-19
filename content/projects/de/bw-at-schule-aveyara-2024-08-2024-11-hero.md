@@ -14,11 +14,11 @@ techStack: "React, TypeScript, Accessibility (WCAG / BITV), Testing"
 narratives:
   cv:
     - label: CV-Beschreibung
-      bodyText: |-
-        • Entwicklung Konzeption und Entwicklung einer Webanwendung im öffentlichen Sektor auf Basis von Next.js unter Berücksichtigung regulatorischer und barrierefreier AnforderungenUmsetzung barrierefreier UI-Komponenten gemäß WCAG und BITV
-        • Bewertung architektonischer Optionen zu Projektbeginn (SSG vs. clientseitige Anwendung) und bewusste Entscheidung zugunsten einer CSR-Architektur
-        • Enge Abstimmung mit Stakeholdern in einem regulierten Umfeld
-        • Hoher Anspruch an Codequalität, Testbarkeit und langfristige Wartbarkeit
+      bodyText:
+        - "Entwicklung Konzeption und Entwicklung einer Webanwendung im öffentlichen Sektor auf Basis von Next.js unter Berücksichtigung regulatorischer und barrierefreier AnforderungenUmsetzung barrierefreier UI-Komponenten gemäß WCAG und BITV"
+        - "Bewertung architektonischer Optionen zu Projektbeginn (SSG vs. clientseitige Anwendung) und bewusste Entscheidung zugunsten einer CSR-Architektur"
+        - "Enge Abstimmung mit Stakeholdern in einem regulierten Umfeld"
+        - "Hoher Anspruch an Codequalität, Testbarkeit und langfristige Wartbarkeit"
 
 isHero: true
 showInCV: true

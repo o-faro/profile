@@ -15,11 +15,11 @@ techStack: "React, TypeScript, VTEX, REST APIs"
 narratives:
   cv:
     - label: "CV-Beschreibung"
-      bodyText: |
-        Frontend-Entwicklung im Rahmen eines Greenfield-Setups für eine internationale Automotive-Commerce-Plattform auf Basis von VTEX
-        Umsetzung modularer UI-Komponenten innerhalb einer größeren Plattform-Architektur
-        Integration der Frontend-Komponenten mit Backend-Services und APIs
-        Fokus auf Responsive Design, Performance und saubere Komponentenarchitektur
+      bodyText:
+        - "Frontend-Entwicklung im Rahmen eines Greenfield-Setups für eine internationale Automotive-Commerce-Plattform auf Basis von VTEX"
+        - "Umsetzung modularer UI-Komponenten innerhalb einer größeren Plattform-Architektur"
+        - "Integration der Frontend-Komponenten mit Backend-Services und APIs"
+        - "Fokus auf Responsive Design, Performance und saubere Komponentenarchitektur"
   portfolio:
     - label: "Projektkontext"
       bodyText: |
