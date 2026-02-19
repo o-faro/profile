@@ -4,8 +4,8 @@
 
 import fs from "fs/promises";
 import path from "path";
-import matter from "gray-matter";
 import { ProjectSchema, type Locale, type ProjectWithContent } from "./types";
+import { parseMarkdownFile } from "./parseMarkdownFile";
 
 /**
  * Get all projects for a given locale
@@ -13,6 +13,7 @@ import { ProjectSchema, type Locale, type ProjectWithContent } from "./types";
 export async function getAllProjects(
   locale: Locale
 ): Promise<ProjectWithContent[]> {
+  console.log("get all pro", locale);
   const projectsDir = path.join(process.cwd(), "content", "projects", locale);
 
   // Check if directory exists
@@ -35,19 +36,19 @@ export async function getAllProjects(
     const fileContents = await fs.readFile(filePath, "utf8");
 
     // Parse frontmatter
-    const { data, content } = matter(fileContents);
+    const { frontmatter, html } = await parseMarkdownFile(fileContents);
 
     try {
       // Validate and parse with Zod
-      const project = ProjectSchema.parse(data);
+      const project = ProjectSchema.parse(frontmatter);
 
       projects.push({
         ...project,
-        content,
+        html,
       });
-    } catch (error) {
-      console.error(`Failed to parse project file ${file}:`, error);
-      throw error;
+    } catch {
+      // console.error(`Failed to parse project file ${file}:`, error);
+      // throw error;
     }
   }
 
@@ -55,24 +56,34 @@ export async function getAllProjects(
 }
 
 /**
- * Get page content for a given locale and page name
+ * Get page content for a given locale and page name (slug).
+ * Resolves partial filenames: e.g. slug "siemens-hellopage" matches
+ * "siemens-hellopage-2019-01-2021-03-hero.md".
  */
 export async function getPageContent(
   locale: Locale,
   pageName: string
-): Promise<{ data: unknown; content: string } | null> {
-  const pagePath = path.join(
-    process.cwd(),
-    "content",
-    "pages",
-    locale,
-    `${pageName}.md`
-  );
+): Promise<{ frontmatter: Record<string, string>; html: string } | null> {
+  const projectsDir = path.join(process.cwd(), "content", "projects", locale);
 
   try {
-    const fileContents = await fs.readFile(pagePath, "utf8");
-    const { data, content } = matter(fileContents);
-    return { data, content };
+    const allFiles = await fs.readdir(projectsDir);
+    const matches = allFiles.filter(
+      (file) =>
+        file.endsWith(".md") &&
+        (file === `${pageName}.md` || file.startsWith(`${pageName}-`))
+    );
+
+    if (matches.length === 0) return null;
+
+    const file = matches[0];
+    const filePath = path.join(projectsDir, file);
+    const fileContents = await fs.readFile(filePath, "utf8");
+    const { frontmatter, html } = await parseMarkdownFile(fileContents);
+    return {
+      frontmatter,
+      html,
+    };
   } catch {
     return null;
   }

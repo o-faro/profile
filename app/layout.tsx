@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   description: "Personal homepage and technical showcase",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">{children}</body>
+    <html lang="en" className="h-screen">
+      <body className="antialiased h-screen bg-[#111927] text-[#7e9bce]">
+        {children}
+      </body>
     </html>
   );
 }

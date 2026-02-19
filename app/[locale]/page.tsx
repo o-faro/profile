@@ -7,9 +7,9 @@
  * TODO: Conditionally show link only if detailPage: true
  */
 
+import { HeroList } from "@/src/components/hero/HeroList";
 import { getHeroProjects } from "@/src/lib/content/filters";
 import { getAllProjects } from "@/src/lib/content/loader";
-import { ProjectWithContent } from "@/src/lib/content/types";
 
 // TODO: Add homepage component here
 
@@ -25,25 +25,10 @@ export default async function Page({
   const { locale } = await params;
   const allProjects = await getAllProjects(locale);
   const heroProjects = getHeroProjects(allProjects);
-  console.log("allProjects", allProjects);
+  // console.log("allProjects", allProjects);
   return (
-    <div>
-      HP Test {locale}
+    <div className="w-full">
       <HeroList heroProjects={heroProjects} />
     </div>
-  );
-}
-
-export function HeroList({
-  heroProjects,
-}: {
-  heroProjects: ProjectWithContent[];
-}) {
-  return (
-    <ul>
-      {heroProjects.map((project) => {
-        return <li key={project.id}>{project.title}</li>;
-      })}
-    </ul>
   );
 }

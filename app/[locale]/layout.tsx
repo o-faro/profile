@@ -5,10 +5,13 @@
  * TODO: Set lang attribute on wrapper element
  */
 
-import { ReactNode } from "react";
+import StartPage from "@/src/components/start/startPage";
 
-// TODO: Add layout component here
-
-export default function layout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+export default async function RootLayout({
+  children,
+  params,
+}: Readonly<{ children: React.ReactNode }> & {
+  params: Promise<{ locale: string }>;
+}) {
+  return <StartPage params={params}>{children}</StartPage>;
 }
