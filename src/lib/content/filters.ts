@@ -2,15 +2,32 @@
  * Classification filters
  */
 
-import type { ProjectWithContent } from "./types";
+import type {
+  ProjectWithContent,
+  HeroProjectWithContent,
+  RegularProjectWithContent,
+} from "./types";
 
 /**
  * Filter projects by isHero: true
  */
 export function getHeroProjects(
   projects: ProjectWithContent[]
-): ProjectWithContent[] {
-  return projects.filter((project) => project.isHero === true);
+): HeroProjectWithContent[] {
+  return projects.filter(
+    (project): project is HeroProjectWithContent => project.isHero === true
+  );
+}
+
+/**
+ * Filter projects by isHero: false
+ */
+export function getRegularProjects(
+  projects: ProjectWithContent[]
+): RegularProjectWithContent[] {
+  return projects.filter(
+    (project): project is RegularProjectWithContent => project.isHero === false
+  );
 }
 
 /**

@@ -5,7 +5,7 @@
 import { z } from "zod";
 
 // Locale type
-export type Locale = "de" | "en";
+export type Locale = string;
 
 // Visibility schema (common to both types)
 const VisibilitySchema = z.object({
@@ -14,20 +14,22 @@ const VisibilitySchema = z.object({
 });
 
 // Narrative schema (hero projects only)
-const NarrativeSchema = z
-  .object({
-    label: z.string(),
-    bodyText: z.string(),
-    source: z.string(),
-  })
-  .passthrough();
+const NarrativeSchemaCV = z.object({
+  label: z.string(),
+  bodyText: z.array(z.string()),
+});
+
+const NarrativeSchemaPortfolio = z.object({
+  label: z.string(),
+  bodyText: z.string(),
+});
 
 // Base schema with common fields
 const ProjectBaseSchema = z.object({
   id: z.string(),
   dateRange: z.string(),
-  showInCV: z.boolean().nullable(),
-  showInArchive: z.boolean().nullable(),
+  showInCV: z.boolean(),
+  showInArchive: z.boolean(),
   detailPage: z.boolean(),
   wentLive: z.boolean(),
   visibility: VisibilitySchema,
@@ -39,13 +41,20 @@ export const HeroProjectSchema = ProjectBaseSchema.extend({
   isHero: z.literal(true),
   title: z.string(),
   aliases: z.array(z.string()),
-  clientOrOrganization: z.string(),
+  clientOrganization: z.string(),
   agencyOrPartner: z.string(),
   roleText: z.string(),
   employmentTypeText: z.string(),
   locationText: z.string(),
-  narratives: z.array(NarrativeSchema),
-}).passthrough();
+  narratives: z.object({
+    cv: z.array(NarrativeSchemaCV),
+    portfolio: z.array(NarrativeSchemaPortfolio).optional(),
+  }),
+  // Optional fields found in some hero projects
+  contextText: z.string().optional(),
+  publicUrl: z.string().optional(),
+  focusAreas: z.array(z.string()).optional(),
+}).strict();
 
 // Regular project schema (isHero: false)
 export const RegularProjectSchema = ProjectBaseSchema.extend({
@@ -53,7 +62,7 @@ export const RegularProjectSchema = ProjectBaseSchema.extend({
   title: z.string(),
   client: z.string(),
   focusAreas: z.array(z.string()),
-}).passthrough();
+}).strict();
 
 // Discriminated union schema
 export const ProjectSchema = z.discriminatedUnion("isHero", [
@@ -68,5 +77,13 @@ export type Project = z.infer<typeof ProjectSchema>;
 
 // Project with markdown content
 export type ProjectWithContent = Project & {
-  content: string;
+  html: string;
+};
+
+export type HeroProjectWithContent = HeroProject & {
+  html: string;
+};
+
+export type RegularProjectWithContent = RegularProject & {
+  html: string;
 };
