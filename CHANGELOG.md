@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/o-faro/profile/compare/v0.2.0...v0.3.0) (2026-02-19)
+
+
+### Features
+
+* add hero list, start page layout, tile component, slug detail page, and markdown parser ([71ab734](https://github.com/o-faro/profile/commit/71ab734cca60b9c1e856ce7ae0e62847a1ba12e9))
+
+
+### Bug Fixes
+
+* update project metadata and improve type safety ([218cec8](https://github.com/o-faro/profile/commit/218cec8a9c5e40712c02af2819ed4a1633e9e240))
+
 ## 0.2.0 (2026-02-12)
 
 
