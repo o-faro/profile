@@ -1,0 +1,15 @@
+---
+description: Plan mode — output only, no file changes
+alwaysApply: true
+---
+
+PLAN MODE — CHAT OUTPUT ONLY
+
+Do NOT modify any files.
+Do NOT open files.
+Do NOT generate diffs.
+Do NOT stage changes.
+
+All proposed code must appear only in the chat window as copyable blocks.
+
+I will apply changes manually.
