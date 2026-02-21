@@ -32,10 +32,10 @@ export default async function Page({
   const intro = await getPage(locale, "home.teaser");
   // console.log("allProjects", allProjects);
   return (
-    <div className="w-full min-h-screen">
-      <div className="flex flex-col min-h-screen place-items-center">
+    <div className="min-h-screen w-full">
+      <div className="flex min-h-screen flex-col place-items-center">
         <article
-          className="prose w-full mx-auto my-16"
+          className="prose mx-auto my-16 w-full"
           contentEditable={false}
           dangerouslySetInnerHTML={{ __html: intro?.html ?? "Not found" }}
         />

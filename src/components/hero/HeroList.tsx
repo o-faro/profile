@@ -1,6 +1,7 @@
 import { HeroProjectWithContent } from "@/lib/content/types";
 // TODO should @ point to src?
 import Tile from "@/ui/Tile";
+import clsx from "clsx";
 
 export function HeroList({
   heroProjects,
@@ -11,11 +12,18 @@ export function HeroList({
     <>
       <h2
         id="relevant_projects"
-        className="text-3xl font-semibold self-center place-self-center"
+        className="place-self-center self-center text-3xl font-semibold"
       >
         Relevant Projects
       </h2>
-      <section className="content-around lg:grid lg:grid-cols-1 xl:grid-cols-2 lg:gap-10 lg:m-12 xl:m-12 2xl:grid-cols-2 xl:space-x-0 xl:space-y-0 ">
+      <section
+        className={clsx(
+          "content-around",
+          "lg:m-12 lg:grid lg:grid-cols-1 lg:gap-10",
+          "xl:m-12 xl:grid-cols-2 xl:space-y-0 xl:space-x-0",
+          "2xl:grid-cols-2"
+        )}
+      >
         {heroProjects.map((project) => {
           return (
             <Tile
