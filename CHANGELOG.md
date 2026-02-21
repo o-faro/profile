@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/o-faro/profile/compare/v0.3.0...v0.4.0) (2026-02-21)
+
+
+### Features
+
+* add getPage function for dynamic page content retrieval ([ebbc9d3](https://github.com/o-faro/profile/commit/ebbc9d31240e585cb7543479147b90d75b121311))
+* enhance layout and styling with new components and typography ([2debe67](https://github.com/o-faro/profile/commit/2debe67ad75b7c83b0c321f464133a60595e82e5))
+
 ## [0.3.0](https://github.com/o-faro/profile/compare/v0.2.0...v0.3.0) (2026-02-19)
 
 
