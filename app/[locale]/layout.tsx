@@ -1,17 +1,12 @@
-/**
- * Locale layout
- *
- * TODO: Implement generateStaticParams()
- * TODO: Set lang attribute on wrapper element
- */
+import Markup from "@/components/start/Markup";
+import { ReactNode } from "react";
 
-import StartPage from "@/src/components/start/startPage";
-
-export default async function RootLayout({
+export default function LodacleLayout({
   children,
   params,
-}: Readonly<{ children: React.ReactNode }> & {
-  params: Promise<{ locale: string }>;
-}) {
-  return <StartPage params={params}>{children}</StartPage>;
+}: Readonly<{
+  children: ReactNode;
+  params: Promise<{ locale: "de" | "en" }>;
+}>) {
+  return <Markup params={params}>{children}</Markup>;
 }

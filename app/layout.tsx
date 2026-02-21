@@ -8,9 +8,12 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+  params: Promise<{ locale: "de" | "en" }>;
+}>) {
   return (
-    <html lang="en" className="h-screen">
+    <html lang="en" className="h-screen scroll-smooth">
       <body className="antialiased h-screen bg-[#111927] text-[#7e9bce]">
         {children}
       </body>

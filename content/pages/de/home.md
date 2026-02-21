@@ -1,3 +1,3 @@
-# Willkommen
+# Oliver Faro
 
-Beispieltext für die Homepage (deutsch).
+## Senior React / TypeScript Engineer – Frontend Architecture & Product Systems

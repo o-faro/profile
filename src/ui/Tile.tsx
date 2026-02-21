@@ -17,7 +17,7 @@ export default function Tile({
     <Link
       aria-label={`View details for ${title}`}
       href={link}
-      className="mb-5 lg:mb-0 bg-[#1a273d] text-[#7e9bce]  hover:bg-[#0d1421] h-full p-8 xl:p-12 xl:rounded-4xl flex flex-col justify-between "
+      className="prose odd:justify-self-end  mb-5 lg:mb-0 bg-[#1a273d] text-[#7e9bce]  hover:bg-[#0d1421] h-full p-8 xl:p-12 xl:rounded-4xl flex flex-col justify-between "
     >
       {children}
       <ArrowRightIcon aria-hidden="true" className="w-5 ml-auto" />

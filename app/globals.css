@@ -1,1 +1,32 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.prose h1 {
+  font-size: var(--text-3xl);
+  color: #7e9bce;
+}
+
+.prose h2 {
+  font-size: var(--text-x);
+  color: #7e9bce;
+}
+
+.prose h3 {
+  font-size: var(--text-lg);
+  color: #7e9bce;
+}
+
+.prose p {
+  margin-bottom: var(--spacing-4);
+  color: #7e9bce;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 3rem;
+  color: #7e9bce;
+}
+
+.prose li {
+  color: #7e9bce;
+}

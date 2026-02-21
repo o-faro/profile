@@ -8,8 +8,9 @@
  * TODO: Use AST for section-based rendering
  */
 
-import { getHeroProjects } from "@/src/lib/content/filters";
-import { getAllProjects, getPageContent } from "@/src/lib/content/loader";
+import BackButton from "@/components/backtotop/BackButton";
+import { getHeroProjects } from "@/lib/content/filters";
+import { getAllProjects, getPageContent } from "@/lib/content/loader";
 
 // TODO: Add detail page component here
 
@@ -34,15 +35,17 @@ export default async function Page({
 }) {
   const { locale, slug } = await params;
   const heroDetail = await getPageContent(locale, slug);
-  console.log(locale, slug, heroDetail);
+
   return (
     <section>
       <article
+        className="prose"
         contentEditable="false"
         dangerouslySetInnerHTML={{
           __html: heroDetail?.html ?? "no hero found",
         }}
       />
+      <BackButton direction="left" />
     </section>
   );
 }
