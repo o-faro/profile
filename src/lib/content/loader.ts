@@ -88,3 +88,24 @@ export async function getPageContent(
     return null;
   }
 }
+
+export async function getPage(
+  locale: Locale,
+  pageName: string
+): Promise<{ frontmatter: Record<string, unknown>; html: string } | null> {
+  const filePath = path.join(
+    process.cwd(),
+    "content",
+    "pages",
+    locale,
+    `${pageName}.md`
+  );
+
+  try {
+    const fileContents = await fs.readFile(filePath, "utf8");
+    const { frontmatter, html } = await parseMarkdownFile(fileContents);
+    return { frontmatter, html };
+  } catch {
+    return null;
+  }
+}
