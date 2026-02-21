@@ -13,7 +13,7 @@ Generate commit messages following the Conventional Commits format.
 ## Rules
 
 - Max 150 characters total (including type prefix)
-- Allowed types: `feat`, `fix`, `refactor`, `perf`, `test`, `chore`, `docs`, `build`, `ci`
+- Allowed types: `feat`, `fix`, `refactor`, `perf`, `test`, `chore`, `docs`, `build`, `ci`, `styles`
 - Subject must not be empty
 - Subject must not start with a capital letter (no sentence-case, start-case, or pascal-case)
 - No period at the end

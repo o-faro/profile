@@ -15,6 +15,7 @@ module.exports = {
         "docs",
         "build",
         "ci",
+        "style",
       ],
     ],
     "subject-empty": [2, "never"],

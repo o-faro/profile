@@ -14,7 +14,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-screen scroll-smooth">
-      <body className="h-screen bg-[#111927] text-[#7e9bce] antialiased">
+      <body className="bg-canvas text-muted h-screen antialiased">
         {children}
       </body>
     </html>

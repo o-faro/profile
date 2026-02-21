@@ -13,7 +13,7 @@ export default async function Markup({
   const { locale } = await params;
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="flex flex-row gap-6 bg-cyan-800">
+      <header className="bg-canvas flex flex-row gap-6">
         <Link href={`/${locale}`}>Start</Link>
         <LanguageSwitcher params={params} />
       </header>
@@ -24,7 +24,7 @@ export default async function Markup({
 
         <div className="min-h-screen grow flex-row">{children}</div>
       </main>
-      <footer className="bg-cyan-800">Footer</footer>
+      <footer className="bg-canvas">Footer</footer>
     </div>
   );
 }

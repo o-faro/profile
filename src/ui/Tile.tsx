@@ -20,8 +20,8 @@ export default function Tile({
       href={link}
       className={clsx(
         "prose mb-5 flex h-full flex-col justify-between",
-        "bg-[#1a273d] p-8 text-[#7e9bce]",
-        "odd:justify-self-end hover:bg-[#0d1421]",
+        "bg-surface text-muted p-8",
+        "hover:bg-surface-hover odd:justify-self-end",
         "lg:mb-0 xl:rounded-4xl xl:p-12"
       )}
     >

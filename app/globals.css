@@ -1,32 +1,35 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@theme {
+  --color-canvas: #111927;
+  --color-surface: #1a273d;
+  --color-surface-hover: #0d1421;
+  --color-foreground: #ffffff;
+  --color-muted: #7e9bce;
+}
+
+.prose {
+  color: var(--color-muted);
+}
+
 .prose h1 {
   font-size: var(--text-3xl);
-  color: #7e9bce;
 }
 
 .prose h2 {
   font-size: var(--text-x);
-  color: #7e9bce;
 }
 
 .prose h3 {
   font-size: var(--text-lg);
-  color: #7e9bce;
 }
 
 .prose p {
   margin-bottom: var(--spacing-4);
-  color: #7e9bce;
 }
 
 .prose ul {
   list-style-type: disc;
   padding-left: 3rem;
-  color: #7e9bce;
-}
-
-.prose li {
-  color: #7e9bce;
 }
