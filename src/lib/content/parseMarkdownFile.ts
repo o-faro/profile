@@ -1,4 +1,5 @@
 import matter from "gray-matter";
+import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -15,7 +16,8 @@ function parseFrontmatter(fileContents: string) {
 async function parseMarkdown(content: string) {
   const processed = await unified()
     .use(remarkParse)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeStringify)
     .process(content);
 

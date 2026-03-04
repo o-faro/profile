@@ -33,9 +33,9 @@ export default async function Page({
   // console.log("allProjects", allProjects);
   return (
     <div className="min-h-screen w-full">
-      <div className="flex min-h-screen flex-col place-items-center">
+      <div className="prose flex min-h-screen flex-col 2xl:place-items-center">
         <article
-          className="prose mx-auto my-16 w-full"
+          className="prose w-full 2xl:mx-auto 2xl:my-16"
           contentEditable={false}
           dangerouslySetInnerHTML={{ __html: intro?.html ?? "Not found" }}
         />

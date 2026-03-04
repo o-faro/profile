@@ -9,11 +9,8 @@ export function HeroList({
   heroProjects: HeroProjectWithContent[];
 }) {
   return (
-    <>
-      <h2
-        id="relevant_projects"
-        className="place-self-center self-center text-3xl font-semibold"
-      >
+    <section className="prose min-w-full">
+      <h2 id="relevant_projects" className="mb-20">
         Relevant Projects
       </h2>
       <section
@@ -48,6 +45,6 @@ export function HeroList({
           );
         })}
       </section>
-    </>
+    </section>
   );
 }

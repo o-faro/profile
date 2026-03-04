@@ -6,7 +6,7 @@ export default async function MainTeaser({ locale }: { locale: Locale }) {
   const mdContent = await getPage(locale, "home");
   return (
     <div
-      className="prose sticky top-0 self-end p-16"
+      className="prose sticky top-0 mb-24 self-end"
       contentEditable="false"
       dangerouslySetInnerHTML={{
         __html: mdContent?.html ?? "no hero found",
