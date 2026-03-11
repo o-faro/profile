@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/o-faro/profile/compare/v0.4.0...v0.5.0) (2026-03-11)
+
+
+### Code Refactoring
+
+* improve layout and styling consistency across components ([0f0bf88](https://github.com/o-faro/profile/commit/0f0bf88b9a4277ecb79eadc8ff572326ea43e4f6))
+
+
+### Styles
+
+* enhance global styles and layout structure for improved readability ([c050dc5](https://github.com/o-faro/profile/commit/c050dc56d9d897ba67d9bc72e7261521ae3081a1))
+* enhance global styles and layout structure with new utilities and responsive design ([e66ba97](https://github.com/o-faro/profile/commit/e66ba97fd9e005c1782767a9e9ede4549c8ce728))
+* update global styles and component theming for consistency ([d431a17](https://github.com/o-faro/profile/commit/d431a1743db38a6245446d14d2847b437833a259))
+
 ## [0.4.0](https://github.com/o-faro/profile/compare/v0.3.0...v0.4.0) (2026-02-21)
 
 
