@@ -23,9 +23,6 @@ export default function BackButton({
   }
 
   return (
-    <Icon
-      className="cursor-pointer w-10 mx-auto my-10"
-      onClick={() => router.back()}
-    />
+    <Icon className="my-10 w-10 cursor-pointer" onClick={() => router.back()} />
   );
 }

@@ -15,9 +15,10 @@ export function HeroList({
       </h2>
       <section
         className={clsx(
-          "content-around",
-          "lg:m-12 lg:grid lg:grid-cols-1 lg:gap-10",
-          "xl:m-12 xl:grid-cols-2 xl:space-y-0 xl:space-x-0",
+          "hero-list",
+          "content-indent",
+          "auto-cols-fr lg:grid lg:grid-cols-1 lg:gap-10",
+          "xl2:grid-cols-2 xl:space-y-0 xl:space-x-0",
           "2xl:grid-cols-2"
         )}
       >

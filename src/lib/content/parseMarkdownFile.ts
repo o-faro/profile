@@ -4,11 +4,12 @@ import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
+import { HeroProject } from "./types";
 
 function parseFrontmatter(fileContents: string) {
   const { data, content } = matter(fileContents);
   return {
-    frontmatter: data,
+    frontmatter: data as HeroProject,
     content,
   };
 }

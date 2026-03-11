@@ -11,7 +11,7 @@
 import BackButton from "@/components/backtotop/BackButton";
 import { getHeroProjects } from "@/lib/content/filters";
 import { getAllProjects, getPageContent } from "@/lib/content/loader";
-
+import "./slug.css";
 // TODO: Add detail page component here
 
 export async function generateStaticParams() {
@@ -39,7 +39,7 @@ export default async function Page({
   return (
     <section>
       <article
-        className="prose"
+        className="prose slug"
         contentEditable="false"
         dangerouslySetInnerHTML={{
           __html: heroDetail?.html ?? "no hero found",

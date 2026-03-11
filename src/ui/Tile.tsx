@@ -19,10 +19,12 @@ export default function Tile({
       aria-label={`View details for ${title}`}
       href={link}
       className={clsx(
-        "prose mb-5 flex h-full flex-col 2xl:justify-between",
-        "2xl:bg-surface border-rim text-muted border-0 border-t-2 2xl:border-2 2xl:p-8",
-        "hover:bg-surface-hover transition-colors 2xl:odd:justify-self-end",
-        "no-underline lg:mb-0 xl:rounded-4xl xl:p-12"
+        "tile prose content-padding",
+        "hover:bg-surface-hover transition-colors",
+        "flex h-full flex-col 2xl:justify-between 2xl:odd:justify-self-end",
+        "border-rim text-muted mb-5 border-0 no-underline",
+        "lg:mb-0 lg:rounded-4xl",
+        "lg:bg-surface lg:border-2"
       )}
     >
       {children}

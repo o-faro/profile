@@ -4,7 +4,12 @@
 
 import fs from "fs/promises";
 import path from "path";
-import { ProjectSchema, type Locale, type ProjectWithContent } from "./types";
+import {
+  HeroProject,
+  ProjectSchema,
+  type Locale,
+  type ProjectWithContent,
+} from "./types";
 import { parseMarkdownFile } from "./parseMarkdownFile";
 
 /**
@@ -63,7 +68,7 @@ export async function getAllProjects(
 export async function getPageContent(
   locale: Locale,
   pageName: string
-): Promise<{ frontmatter: Record<string, string>; html: string } | null> {
+): Promise<{ frontmatter: HeroProject; html: string } | null> {
   const projectsDir = path.join(process.cwd(), "content", "projects", locale);
 
   try {

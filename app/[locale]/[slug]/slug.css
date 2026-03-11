@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.prose.headline {
+  margin-bottom: var(--spacing-lg);
+}
+
+article.prose.slug {
+  margin-left: var(--spacing-xl);
+}

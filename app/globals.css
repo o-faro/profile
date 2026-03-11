@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@utility content-indent {
+  margin-left: var(--spacing-xl);
+}
+
+@utility content-padding {
+  padding: var(--content-padding-xl);
+}
+
 @theme {
   --color-canvas: #111927;
   --color-surface: #1a273d;
@@ -9,19 +17,47 @@
   --color-muted: #7e9bce;
   --color-rim: #334a70;
   --font-sans: var(--font-rokkitt);
-  --leading-default: 46px;
-  --leading-h1: 65px;
-  --leading-h2: 46px;
   --breakpoint-3xl: 1920px;
   --breakpoint-4xl: 2560px;
+  --leading-default: 1.8;
+  --leading-h1: 2.5;
+  --leading-h2: 1.8;
+  --spacing-lg: 0;
+  --spacing-xl: 0;
+  --content-padding-xl: 0;
 }
 
 @layer base {
   body {
-    font-size-adjust: 0.8px;
-    font-size: 20px;
-    line-height: 120%;
+    font-size-adjust: 0.5;
+    font-size: 16px;
+    line-height: var(--leading-default);
   }
+
+  @media (min-width: theme(--breakpoint-2xl)) {
+    :root {
+      --spacing-lg: 18rem;
+      --spacing-xl: 32rem;
+    }
+  }
+
+  @media (min-width: theme(--breakpoint-xl)) {
+    :root {
+      --leading-default: 2;
+      --leading-h1: 1.4;
+      --leading-h2: 1.5;
+      --spacing-lg: 8rem;
+      --spacing-xl: 24rem;
+    }
+  }
+  @media (min-width: theme(--breakpoint-lg)) {
+    :root {
+      --spacing-lg: 6rem;
+      --spacing-xl: 8rem;
+      --content-padding-xl: 1rem;
+    }
+  }
+
   @media (min-width: theme(--breakpoint-md)) {
     body {
       font-size: 16px;
@@ -31,47 +67,66 @@
 }
 
 .prose {
-  font-size: 18px;
+  font-size: 1rem;
   color: var(--color-muted);
+  line-height: var(--leading-default);
   --tw-prose-headings: var(--color-muted);
+  --tw-prose-bullets: var(--color-muted);
 }
 
 .prose ul {
   display: inline-block;
   width: 100%;
-  list-style-type: none;
-  color: var(--color-muted);
-  padding-left: 0;
+  list-style-type: disc;
+  padding-left: 1.2rem;
 }
 
 .prose li {
-  display: inline-block;
-  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: var(--leading-default);
+}
+
+.prose h1 {
+  font-size: var(--text-lg);
+  line-height: var(--leading-h1);
+  font-weight: 400;
+}
+
+.prose h2 {
+  font-size: var(--text-default);
+  line-height: var(--leading-h2);
+  font-weight: 400;
+}
+
+.prose h3 {
+  font-size: var(--text-default);
+  line-height: var(--leading-default);
+  font-weight: 400;
 }
 
 @media (min-width: theme(--breakpoint-lg)) {
   .prose {
-    font-size: 16px;
-    line-height: var(--leading-default);
+    font-size: 1.5rem;
   }
-
   .prose h1 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-5xl);
     line-height: var(--leading-h1);
+    margin: 0;
   }
 
   .prose h2 {
-    font-size: var(--text-xl);
+    font-size: var(--text-3xl);
     line-height: var(--leading-h2);
+    margin: 0;
   }
 
   .prose h3 {
-    font-size: var(--text-x);
+    font-size: var(--text-xl);
     line-height: var(--leading-default);
   }
 
-  .prose p {
-    margin-bottom: var(--spacing-4);
+  .prose > article > p {
+    margin-bottom: var(--spacing-lg);
     line-height: var(--leading-default);
   }
 
@@ -80,7 +135,10 @@
     padding-left: 2rem;
   }
   .prose li {
+    font-size: 1.5rem;
     padding-bottom: 0;
+    line-height: 2rem;
+    padding-bottom: 1.5rem;
   }
 }
 

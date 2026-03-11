@@ -1,10 +1,5 @@
 /**
  * Homepage
- *
- * TODO: Load hero projects (isHero: true)
- * TODO: Load home.md content
- * TODO: Render hero project cards
- * TODO: Conditionally show link only if detailPage: true
  */
 
 import BackButton from "@/components/backtotop/BackButton";
@@ -33,9 +28,9 @@ export default async function Page({
   // console.log("allProjects", allProjects);
   return (
     <div className="min-h-screen w-full">
-      <div className="prose flex min-h-screen flex-col 2xl:place-items-center">
+      <div className="prose content-indent flex min-h-screen flex-col 2xl:place-items-center">
         <article
-          className="prose w-full 2xl:mx-auto 2xl:my-16"
+          className="content-padding w-full 2xl:my-16"
           contentEditable={false}
           dangerouslySetInnerHTML={{ __html: intro?.html ?? "Not found" }}
         />
