@@ -1,4 +1,5 @@
 import { LanguageSwitcher } from "@/components/languageswitcher/LanguageSwitcher";
+import clsx from "clsx";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -18,11 +19,13 @@ export default async function LodacleLayout({
         <Link href={`/${locale}`}>Start</Link>
         <LanguageSwitcher params={params} />
       </header>
-      <main className="flex grow flex-col md:w-full md:flex-col md:justify-between 2xl:p-32">
-        <div className="w-full shrink-0">
-          {/* <div className="w-full shrink-0 md:w-64 lg:w-sm xl:w-sm 2xl:w-md"> */}
-          {headline}
-        </div>
+      <main
+        className={clsx(
+          "main-padding",
+          "flex grow flex-col md:w-full md:flex-col md:justify-between"
+        )}
+      >
+        <div className="w-full shrink-0">{headline}</div>
 
         <div className="min-h-screen grow flex-row">{children}</div>
       </main>

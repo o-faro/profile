@@ -28,7 +28,7 @@ export default async function Page({
   // console.log("allProjects", allProjects);
   return (
     <div className="min-h-screen w-full">
-      <div className="prose content-indent flex min-h-screen flex-col 2xl:place-items-center">
+      <div className="prose content-indent flex flex-col xl:min-h-screen 2xl:place-items-center">
         <article
           className="content-padding w-full 2xl:my-16"
           contentEditable={false}

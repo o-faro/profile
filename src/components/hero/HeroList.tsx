@@ -13,12 +13,11 @@ export function HeroList({
       <h2 id="relevant_projects" className="mb-20">
         Relevant Projects
       </h2>
-      <section
+      <div
         className={clsx(
           "hero-list",
           "content-indent",
-          "auto-cols-fr lg:grid lg:grid-cols-1 lg:gap-10",
-          "xl2:grid-cols-2 xl:space-y-0 xl:space-x-0",
+          "lg:grid lg:grid-cols-1 lg:gap-10",
           "2xl:grid-cols-2"
         )}
       >
@@ -45,7 +44,7 @@ export function HeroList({
             </Tile>
           );
         })}
-      </section>
+      </div>
     </section>
   );
 }
