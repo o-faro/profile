@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:fresh": "lsof -ti:3000 | xargs kill -9 2>/dev/null || true && rm -rf .next && next dev",
     "dev:inspect": "NODE_OPTIONS='--inspect=9229' next dev",
     "build": "next build",
     "start": "next start",
@@ -27,6 +28,7 @@
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "next": "16.1.6",
+    "next-intl": "^4.8.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "rehype-raw": "^7.0.0",
