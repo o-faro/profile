@@ -1,17 +1,19 @@
 import { HeroProjectWithContent } from "@/lib/content/types";
-// TODO should @ point to src?
+
 import Tile from "@/ui/Tile";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 
 export function HeroList({
   heroProjects,
 }: {
   heroProjects: HeroProjectWithContent[];
 }) {
+  const t = useTranslations("projects.relevant");
   return (
     <section className="prose min-w-full">
       <h2 id="relevant_projects" className="mb-20">
-        Relevant Projects
+        {t("title")}
       </h2>
       <div
         className={clsx(
