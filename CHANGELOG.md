@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/o-faro/profile/compare/v0.5.0...v1.0.0) (2026-03-19)
+
+
+### Features
+
+* enhance internationalization support and layout structure ([936562b](https://github.com/o-faro/profile/commit/936562b97d0ea10fd8ce5c3100d3c98371014723))
+* enhance project localization and content structure ([b7e4d25](https://github.com/o-faro/profile/commit/b7e4d2511ddcb2221e0eab6afe01c1b51909b320))
+* integrate next-intl for internationalization support ([4b889e7](https://github.com/o-faro/profile/commit/4b889e76d512eb30d4e47599bb192c78d83ee57e))
+
+
+### Bug Fixes
+
+* release script to forward major/minor/patch args ([e0e19b0](https://github.com/o-faro/profile/commit/e0e19b0bcd725f4383af47b24c6227831272b51a))
+
+
+### Styles
+
+* refine global styles and layout components for improved responsiveness and readability ([57a6498](https://github.com/o-faro/profile/commit/57a649864cee1312ceddfd49001adb2280cbcdef))
+* refine global styles and layout components for improved responsiveness and readability ([b7f2f9f](https://github.com/o-faro/profile/commit/b7f2f9f5816a1fd6ff5cf7ec7fe666b2a9c247d4))
+* remove unused Tailwind CSS imports from slug.css ([5cbbbed](https://github.com/o-faro/profile/commit/5cbbbedc98ba68d6bc930567bac41782c6864f3d))
+
 ## [0.5.0](https://github.com/o-faro/profile/compare/v0.4.0...v0.5.0) (2026-03-11)
 
 
