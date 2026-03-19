@@ -1,0 +1,15 @@
+{
+  "bio": {
+    "fullName": "Oliver Faro"
+  },
+  "projects": {
+    "relevant": {
+      "title": "Relevant Projects"
+    },
+    "slug": {
+      "title": "Projekt",
+      "role": "As a {employmentTypeText} for {agencyOrPartner}, Client {clientOrganization}",
+      "alt": "'<not found>'"
+    }
+  }
+}

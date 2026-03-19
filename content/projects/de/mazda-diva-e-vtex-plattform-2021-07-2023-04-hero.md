@@ -4,11 +4,11 @@ id: mazda-diva-e-vtex-plattform
 title: "Mazda – Diva-e / VTEX Plattform"
 aliases:
   - "Mazda Händlerplattform"
-clientOrganization: "Mazda"
-agencyOrPartner: "Diva-e"
-contextText: "Öffentlich zugängliche Startseite der Mazda Händlerplattform."
+clientOrganization: "Shop Mazda"
+agencyOrPartner: "Diva-e Conclusion"
+contextText: "B2C Plattform"
 roleText: "Senior Frontend Entwickler"
-employmentTypeText: "Freie Mitarbeit"
+employmentTypeText: "Selbständiger"
 locationText: "München"
 publicUrl: "https://shop.mazda.co.uk/"
 techStack: "React, TypeScript, VTEX, REST APIs"
@@ -81,7 +81,7 @@ visibility:
 
 ## Context
 
-Implementation and further development of the Mazda UK online shop.
+Implementation and further development a global online shop for Mazda.
 
 ## Role & setup
 
