@@ -16,7 +16,7 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
-    "release": "standard-version",
+    "release": "node -e \"var a=process.argv[1],e=process.argv.slice(2).join(' '); require('child_process').execSync(('standard-version'+(a&&['major','minor','patch'].includes(a)?' --release-as '+a:'')+(e?' '+e:'')).trim(),{stdio:'inherit'})\"",
     "release:patch": "standard-version --release-as patch",
     "release:minor": "standard-version --release-as minor",
     "release:major": "standard-version --release-as major",
