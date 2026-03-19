@@ -5,9 +5,9 @@ title: Siemens „HelloPage“ – Intranet Startseite
 aliases:
   - Siemens – Intranet Portal „HelloPage“
 clientOrganization: Siemens
-agencyOrPartner: Querplex
+agencyOrPartner: Querplex GmbH
 roleText: Senior Frontend Entwickler
-employmentTypeText: Freie Mitarbeit
+employmentTypeText: Selbständiger
 locationText: München
 techStack: |-
   React · TypeScript · SCSS

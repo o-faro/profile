@@ -4,8 +4,8 @@ dateRange: "13.01.2025 – 28.02.2025"
 id: "youre-family-backoffice-gc-universe"
 title: "Backoffice GC-Universe – YOURE Family GmbH"
 aliases: []
-clientOrganization: "YOURE Family GmbH"
-agencyOrPartner: ""
+clientOrganization: "GC-Universe"
+agencyOrPartner: "YOURE Family GmbH"
 roleText: ""
 employmentTypeText: "freelancer"
 locationText: ""
@@ -19,7 +19,7 @@ narratives:
         - "Entwicklung wiederverwendbarer UI-Komponenten und interner Designsystem-Patterns"
         - "Frontend-Integration von Authentifizierungs- und Autorisierungsmechanismen über Keycloak (OpenID Connect)"
         - "Systematische Verbesserung von Testabdeckung, Performance und Frontend-Qualität"
-        - "Produktiver Einsatz moderner Entwickler-Tools inklusive KI-gestützter Workflows (Cursor IDE)"
+        - "Produktiver Einsatz moderner Entwickler-Tools inklusive KI-gestützter Workflows"
 
 isHero: true
 showInCV: true

@@ -5,6 +5,11 @@
   "projects": {
     "relevant": {
       "title": "Relevante Projekte"
+    },
+    "slug": {
+      "title": "Projekt",
+      "role": "Als {employmentTypeText} für die {agencyOrPartner}, Kunde {clientOrganization}",
+      "alt": "'<nicht gefunden>'"
     }
   }
 }

@@ -4,12 +4,12 @@ dateRange: "08.2024 – 11.2024"
 id: bw-at-schule-aveyara
 title: BW@Schule
 aliases: []
-clientOrganization: Aveyara GmbH
-agencyOrPartner: ""
+clientOrganization: Land Baden-Württemberg, BW@Schule
+agencyOrPartner: "Aveyara GmbH"
 roleText: ""
-employmentTypeText: "freelancer"
+employmentTypeText: "Selbständiger"
 locationText: ""
-contextText: Public Sector
+contextText: Öffentlicher Bereich
 techStack: "React, TypeScript, Accessibility (WCAG / BITV), Testing"
 narratives:
   cv:
