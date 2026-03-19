@@ -26,6 +26,7 @@ export default async function LodacleLayout({
       <div className="flex min-h-screen flex-col px-2 sm:px-4 sm:py-2 2xl:px-32">
         <header className="bg-canvas flex flex-row gap-6 2xl:gap-16">
           <Link href={`/${locale}`}>Start</Link>
+          <Link href={`/${locale}/pdf`}>Generic PDF</Link>
           <LanguageSwitcher params={params} />
         </header>
         <main
